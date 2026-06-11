@@ -20,6 +20,11 @@
                         <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com"></div>
                     </div>
                     <div class="mb-3 row">
+                        <label for="phone_number" class="col-form-label col-sm-4">Telefoonnummer:</label>
+                        <div class="col-sm-8">
+                        <input type="text" name="phone_number" class="form-control" id="phone_number" value="{{ old('phone_number') }}" placeholder="06... (optioneel)"></div>
+                    </div>
+                    <div class="mb-3 row">
                         <label for="password" class="col-form-label col-sm-4">Wachtwoord:</label>
                         <div class="col-sm-8">
                         <input type="password" name="password" class="form-control" id="password"></div>
