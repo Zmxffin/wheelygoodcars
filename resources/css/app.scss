@@ -20,3 +20,54 @@ $font-family-sans-serif: 'Open Sans', sans-serif;
     justify-content: center;
     align-items: center;
 }
+
+// Dutch license-plate styled input (home + multistep step 1)
+.kenteken-bar{
+    display: inline-flex;
+    align-items: stretch;
+    background: #ffdd00;
+    border: 3px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 800;
+    max-width: 480px;
+    width: 100%;
+
+    .kenteken-country{
+        background: #0033a0;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 0 .75rem;
+        font-size: 1.1rem;
+    }
+    .kenteken-input{
+        flex: 1;
+        border: none;
+        background: #ffdd00;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: .15rem;
+        text-transform: uppercase;
+        color: #000;
+        min-width: 0;
+        &:focus{ outline: none; }
+        &::placeholder{ color: rgba(0,0,0,.35); }
+    }
+    .kenteken-go{
+        border: none;
+        border-left: 3px solid #000;
+        background: #ffdd00;
+        padding: 0 1.25rem;
+        font-weight: 800;
+        cursor: pointer;
+        &:hover{ background: #ffe84d; }
+    }
+}
+
+// F5 — playful highlighted cars in the public grid
+.car-card-highlight{
+    transform: scale(1.03);
+    border: 2px solid var(--bs-primary) !important;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.15);
+}
