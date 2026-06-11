@@ -25,6 +25,7 @@ class UserFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
+            'phone_number' => fake()->boolean(80) ? fake()->numerify('06########') : null,
             'remember_token' => Str::random(10),
         ];
     }
@@ -36,6 +37,16 @@ class UserFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
+        ]);
+    }
+
+    /**
+     * Seller without a phone number (flagged as "notable" in B5).
+     */
+    public function withoutPhone(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'phone_number' => null,
         ]);
     }
 }
